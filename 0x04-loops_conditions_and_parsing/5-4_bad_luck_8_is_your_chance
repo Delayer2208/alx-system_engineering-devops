@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times
+# displays Best School 10 times.
 
-counter=1
-while [ $counter -le 10 ]
+COUNTER=1
+while [ $COUNTER -lt 11 ]
 do
-    if [[ $counter == '4' ]]
+    if [ $COUNTER = 4 ]
     then
         echo "bad luck"
-    elif [[ $counter == '8' ]]
+    elif [ $COUNTER = 8 ]
     then
         echo "good luck"
     else
         echo "Best School"
     fi
-    ((counter++))
+    let COUNTER+=1
 done
